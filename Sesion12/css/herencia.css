@@ -1,0 +1,17 @@
+/*
+body{
+    color:blue;
+}*/
+
+
+body{
+    from-family:arial;
+    color:black;
+}
+h1{
+    font-family:Verdana;
+}
+
+p{
+    color: red;
+}
