@@ -1,0 +1,42 @@
+
+
+/* Caso01
+.contenedor_grid{
+    display: grid;
+    
+    grid-template-columns: 50px 300px;
+    grid-template-rows: 200px 75px;
+} */
+
+/*Caso 2*/
+/* .contenedor_grid{
+    display: grid;
+    
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 2fr 1fr;
+} */
+
+/*Caso 3*/
+.contenedor_grid{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: "cabecera cabecera"
+    "menu contenido" "pie pie";
+} 
+
+.a{
+    grid-area: cabecera;
+    background-color: blue;
+}
+.b{
+    grid-area: menu;
+    background-color: red;
+}
+.c{
+    grid-area: contenido;
+    background-color: green;
+}
+.d{
+    grid-area: pie;
+    background-color: orange;
+}

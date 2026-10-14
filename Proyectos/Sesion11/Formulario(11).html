@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title> Incripciones </title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <div id="Contenedor" style="width: 500px;">
+        <h2>Formulario de Incripción</h2>
+        <form id="formulario" name="formulario" metoh="post" action="data.php">
+            <fieldset id="datos_personales">
+                <legend>Datos_Personales</legend>
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre"><br>
+                <label for="apellidos">Apellidos</label><br>
+                <input type="text" name="apellidos" id="apellidos"><br>
+                <label for="direccion">Direccion</label><br>
+                <input type="text" name="direccion" id="direccion"><br>
+                <label for="dni">DNI</label><br>
+                <input type="text" name="dni" id="dni" maxlength="9"><br>
+                <label for="text">Fecha</label><br>
+                <input type="date"><br>
+                <label for="direccion">Email</label><br>
+                <input type="text" name="email" id="email"><br>
+                <label for="fecha_nacimiento">Universidad</label><br>
+                <select id="miEtiqueta" name="miEtiqueta">
+                    <option value="X" selected="selected">Opciones</option>
+                    <option value="A">Usat</opcion>
+                    <option value="B">USS</opcion>
+                    <option value="C">UTP</opcion>
+                </select>
+            </fieldset><br>
+            <fieldset id="Sexo">
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo"> Masculino<br>
+                <input type="radio" name="sexo"> Femenino
+            </fieldset><br>
+            <fieldset id="Cursos">
+                <legend>Cursos</legend>
+                <input type="checkbox"> Inteligencia Artificial <br>
+                <input type="checkbox"> Business Inteligence <br>
+                <input type="checkbox"> Ciencia de datos <br>
+                <input type="checkbox"> Cybersiguridad 
+            </fieldset><br>
+            <fieldset id="grupo_observaciones">
+                <legend>Comentario</legend>
+                <textarea id="observ" name="observ" rows="14" cols="50"></textarea>
+            </fieldset>
+            <br>
+            <div id="botones">
+                <input type="reset" class="btn" value="Nuevo">
+                <input type="submit" class="btn" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

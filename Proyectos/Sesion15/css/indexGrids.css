@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    /* la resta de 100 menor header + food */
+    min-height: 74vh;
+    grid-template-columns: 20% 1fr 20%;
+    grid-row: 100%;
+    grid-template-areas: "my-nav my-section my-aside";
+}
+
+header{
+    background-color: firebrick;
+    color: white;
+    min-height: 16vh;
+    text-align: center;
+    line-height: 100px;
+}
+
+nav{
+    grid-area: my-nav;
+    background-color: lightcoral;
+}
+
+section{
+    grid-area: my-section;
+    background-color: pink;
+}
+
+aside{
+    grid-area: my-aside;
+    background-color: lightcoral;
+}
+
+nav,section,aside{
+    padding: 20px;
+}
+
+footer{
+    min-height: 10vh;
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

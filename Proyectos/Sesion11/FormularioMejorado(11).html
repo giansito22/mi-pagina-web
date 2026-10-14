@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscripciones</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+
+    <div id="Contenedor" style="width: 520px; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        
+        <!-- Logo y Cabecera Principal -->
+        <div style="text-align: center; margin-bottom: 25px;">
+            <!-- Puedes cambiar el src por la ruta de tu logo real -->
+            <img src="img/logo.png" alt="Logo Principal" style="max-width: 120px; height: auto; margin-bottom: 10px;" onerror="this.style.display='none'">
+            <h2 style="color: #1a73e8; margin: 0; font-size: 24px;">Formulario de Inscripción</h2>
+            <p style="color: #666; font-size: 13px; margin-top: 5px;">Completa tus datos para registrarte en los cursos</p>
+        </div>
+
+        <form id="formulario" name="formulario" method="post" action="data.php">
+            
+            <!-- Datos Personales -->
+            <fieldset id="datos_personales" style="border: 1px solid #dcdcdc; border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; background-color: #fafafa;">
+                <legend style="color: #1a73e8; font-weight: bold; padding: 0 5px; font-size: 14px;">Datos Personales</legend>
+                
+                <label for="nombre" style="font-size: 13px; font-weight: 600; color: #333;">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" style="width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><br>
+                
+                <label for="apellidos" style="font-size: 13px; font-weight: 600; color: #333;">Apellidos</label><br>
+                <input type="text" name="apellidos" id="apellidos" style="width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><br>
+                
+                <label for="direccion" style="font-size: 13px; font-weight: 600; color: #333;">Dirección</label><br>
+                <input type="text" name="direccion" id="direccion" style="width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><br>
+                
+                <label for="dni" style="font-size: 13px; font-weight: 600; color: #333;">DNI</label><br>
+                <input type="text" name="dni" id="dni" maxlength="9" style="width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><br>
+                
+                <label for="fecha" style="font-size: 13px; font-weight: 600; color: #333;">Fecha</label><br>
+                <input type="date" name="fecha" id="fecha" style="width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><br>
+                
+                <label for="email" style="font-size: 13px; font-weight: 600; color: #333;">Email</label><br>
+                <input type="email" name="email" id="email" style="width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"><br>
+                
+                <label for="miEtiqueta" style="font-size: 13px; font-weight: 600; color: #333;">Universidad</label><br>
+                <select id="miEtiqueta" name="miEtiqueta" style="width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; box-sizing: border-box;">
+                    <option value="X" selected="selected">Opciones</option>
+                    <option value="A">USAT</option>
+                    <option value="B">USS</option>
+                    <option value="C">UTP</option>
+                </select>
+            </fieldset>
+
+            <!-- Sexo -->
+            <fieldset id="Sexo" style="border: 1px solid #dcdcdc; border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; background-color: #fafafa;">
+                <legend style="color: #1a73e8; font-weight: bold; padding: 0 5px; font-size: 14px;">Sexo</legend>
+                <label style="margin-right: 15px; font-size: 13px;"><input type="radio" name="sexo" value="M"> Masculino</label>
+                <label style="font-size: 13px;"><input type="radio" name="sexo" value="F"> Femenino</label>
+            </fieldset>
+
+            <!-- Cursos -->
+            <fieldset id="Cursos" style="border: 1px solid #dcdcdc; border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; background-color: #fafafa;">
+                <legend style="color: #1a73e8; font-weight: bold; padding: 0 5px; font-size: 14px;">Cursos de Interés</legend>
+                <div style="margin-bottom: 8px;"><label style="font-size: 13px;"><input type="checkbox" name="curso[]" value="ia"> Inteligencia Artificial</label></div>
+                <div style="margin-bottom: 8px;"><label style="font-size: 13px;"><input type="checkbox" name="curso[]" value="bi"> Business Intelligence</label></div>
+                <div style="margin-bottom: 8px;"><label style="font-size: 13px;"><input type="checkbox" name="curso[]" value="cd"> Ciencia de datos</label></div>
+                <div><label style="font-size: 13px;"><input type="checkbox" name="curso[]" value="cs"> Ciberseguridad</label></div>
+            </fieldset>
+
+            <!-- Comentario -->
+            <fieldset id="grupo_observaciones" style="border: 1px solid #dcdcdc; border-radius: 8px; padding: 15px 20px; margin-bottom: 20px; background-color: #fafafa;">
+                <legend style="color: #1a73e8; font-weight: bold; padding: 0 5px; font-size: 14px;">Comentario</legend>
+                <textarea id="observ" name="observ" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+            </fieldset>
+
+            <!-- Botones de Acción -->
+            <div id="botones" style="display: flex; justify-content: flex-end; gap: 10px;">
+                <input type="reset" class="btn" value="Nuevo" style="padding: 10px 20px; background-color: #e0e0e0; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; color: #333;">
+                <input type="submit" class="btn" value="Enviar" style="padding: 10px 20px; background-color: #1a73e8; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; color: #fff;">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

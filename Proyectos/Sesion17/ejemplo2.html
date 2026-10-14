@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>JS en el head</title>
+    
+</head>
+<body>
+    <h1>Operacion JS en el head de la página</h1>
+    <p>El cálculo se realizó con éxito antes de mostrar este mensaje</p>
+    <script>
+        base = Number(prompt("Ingrese la base del rectángulo"));
+        altura = Number(prompt("Ingrese la altura del rectángulo"));
+
+        area = base * altura;
+        perimetro = 2 * (base + altura);
+
+        alert("Area de la figura\n" + "Area: " + area + " m2\n" + "Perimetro: " + perimetro + " m");
+    </script>
+</body>
+</html>
