@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Agenda V1</title>
+        <link rel="stylesheet" href="css/agenda_v1.css">
+</head>
+
+<body>
+        <main class="agenda">
+                <section class="formulario">
+                        <h2>Agregar Contacto</h2>
+                        <form id="formulario" autocomplete="off">
+                                <div class="campo"><label for="nombre">Nombre:</label><input id="nombre" type="text">
+                                </div>
+                                <div class="campo"><label for="telefono">Teléfono:</label><input id="telefono"
+                                                type="tel"></div>
+                                <div class="botones"><button type="button" id="guardar">Guardar datos</button></div>
+                        </form>
+                        <p id="mensaje" role="status"></p>
+                </section>
+                <section class="contactos">
+                        <h2>Lista de Contactos</h2>
+                        <ul id="lista"></ul><button type="button" id="recuperar">Recuperar Contactos</button>
+                </section>
+        </main>
+        <script src="js/agenda_v1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #100d22;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #c49aff;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contenedor > p {
+    color: #aaa2c5;
+    margin-bottom: 25px;
+}
+
+.panel {
+    background: #1c1835;
+    padding: 22px;
+    border: 1px solid #493879;
+    border-radius: 18px;
+    box-shadow: 0 0 30px #6b35a044;
+}
+
+.indicador {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    color: #d6baff;
+    font-weight: bold;
+}
+
+/* LABERINTO */
+
+.laberinto {
+    --celda: 30px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(11, var(--celda));
+    grid-template-rows: repeat(11, var(--celda));
+
+    gap: 3px;
+
+    background: #100d22;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.celda {
+    width: var(--celda);
+    height: var(--celda);
+    border-radius: 4px;
+}
+
+.muro {
+    background: #5737a1;
+    box-shadow: inset 0 0 8px #9c69ff55;
+}
+
+.camino {
+    background: #292343;
+}
+
+.salida {
+    background: #b28b29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+/* FANTASMITA */
+
+.fantasma {
+    width: 25px;
+    height: 25px;
+
+    background: #bb75ff;
+    border-radius: 50% 50% 35% 35%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 5;
+
+    box-shadow: 0 0 15px #bd7cff;
+    pointer-events: none;
+}
+
+.ojos {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 7px;
+}
+
+.ojo {
+    width: 5px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+}
+
+.boca {
+    width: 5px;
+    height: 4px;
+    background: #37204f;
+    border-radius: 50%;
+    margin: 3px auto;
+}
+
+/* BOTÓN */
+
+button {
+    margin-top: 20px;
+    padding: 13px 25px;
+
+    background: #8547d9;
+    border: none;
+    border-radius: 25px;
+
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+    background: #a66aff;
+    transform: scale(1.05);
+}
+
+#mensaje {
+    margin-top: 15px;
+    color: #c49aff;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .laberinto {
+        --celda: 25px;
+    }
+
+    .panel {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+}
